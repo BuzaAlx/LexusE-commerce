@@ -1,0 +1,58 @@
+.model-list {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+
+.model-list__row {
+  margin-bottom: 50px;
+  padding-top: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > h2,
+  a {
+    text-transform: uppercase;
+    font-family: NobelWGL, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+  & > h2 {
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 20px;
+  }
+  & > a {
+    padding: 10px 0;
+    transition: all 0.4s;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 40px;
+  grid-column-gap: 53px;
+  @media screen and (max-width: 1160px) {
+    grid-row-gap: 0;
+  }
+}
+
+.description {
+  font-family: NobelWGLRegular, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-display: auto;
+  font-weight: 400;
+  line-height: 1;
+  color: #817e7bcb;
+  padding: 30px 0 40px;
+  & > p {
+    padding-bottom: 5px;
+  }
+}
