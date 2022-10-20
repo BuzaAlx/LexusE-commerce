@@ -1,0 +1,27 @@
+@import "./modules/reset";
+
+body {
+  background-color: black;
+}
+
+.container {
+  max-width: 1054px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container-wide {
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: NobelWGL, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}

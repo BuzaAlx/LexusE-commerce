@@ -1,0 +1,108 @@
+#app {
+  width: 100%;
+}
+
+.main-slider {
+  position: relative;
+  background-color: black;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slider-pagination {
+  background-color: transparent;
+  position: absolute;
+  text-align: start;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 1000;
+  width: 100%;
+  bottom: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: 1px solid white;
+  & > span {
+    display: inline-block;
+    position: relative;
+    padding: 30px 50px;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: NobelWGL, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    color: white;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 1px;
+      content: "";
+      background-color: #fff;
+      opacity: 0;
+    }
+  }
+}
+
+.slider-pagination-bullet-active {
+  color: white !important;
+  opacity: 1 !important;
+  &::before {
+    opacity: 1 !important;
+  }
+}
+
+.slide-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 50;
+  }
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+}
+
+.slide__inner {
+  max-width: 415px;
+  margin: 0 200px;
+  position: relative;
+  z-index: 50;
+  color: white;
+}
+
+.slide__tittle {
+  font-family: NobelWGLRegular, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 30px;
+}
+
+.slide__subtitle {
+  font-family: NobelWGLRegular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  background-image: linear-gradient(-180deg, #292929 0%, #000000 98%);
+  position: relative;
+  height: 100vh;
+}
