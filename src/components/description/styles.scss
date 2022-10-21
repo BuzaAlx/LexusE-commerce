@@ -1,0 +1,42 @@
+.description {
+  font-family: NobelWGL, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background-color: #fff;
+  & > div {
+    display: flex;
+    gap: 80px;
+  }
+  & .description_column {
+    flex: 1 1 50%;
+    position: relative;
+  }
+}
+
+.description-row {
+  padding-bottom: 200px;
+}
+
+.description_title {
+  font-size: 55px;
+  line-height: 70px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.description_subtitle {
+  margin-bottom: 40px;
+}
+
+.image-overflow {
+  width: 600px;
+  position: absolute;
+  margin-top: 30px;
+  z-index: 10;
+}
+
+.description_column--right {
+  order: 1;
+}
+
+.image-right {
+  transform: translateX(-120px);
+}
