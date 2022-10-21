@@ -42,12 +42,12 @@ export default function CardList() {
           <Card />
           <Card />
           <Card /> */}
+          {/* <Card />
           <Card />
           <Card />
           <Card />
           <Card />
-          <Card />
-          <NewCard />
+          <NewCard /> */}
         </div>
         <section className="description">
           <p>

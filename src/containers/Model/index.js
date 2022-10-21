@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../components/layout";
 import Button from "../../components/shared/button";
 import headerImage from "../../images/modelPage/top-mainImage.png";
@@ -11,6 +11,7 @@ import { BsSpeedometer } from "react-icons/bs";
 import { TbEngine, TbGasStation } from "react-icons/tb";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import firebase from "../../services/firebase";
 
 const colorPalette = [
   { id: 1, color: "#BE1728" },
@@ -22,8 +23,29 @@ const colorPalette = [
 
 export default function Model() {
   const [selectedColorId, setSelectedColorId] = useState(1);
-  const { series, model } = useParams();
-  console.log(selectedColorId);
+  const { model } = useParams();
+  const [auto, setAuto] = useState(null);
+
+  const fetchAuto = async () => {
+    const docs = await firebase.getSingleAutoByLink(model);
+
+    const items = [];
+    docs.forEach((snap) => {
+      const data = snap.data();
+      items.push({ id: snap.ref.id, ...data });
+    });
+
+    setAuto(items[0]);
+  };
+
+  useEffect(() => {
+    if (!auto) {
+      fetchAuto();
+    }
+  }, []);
+
+  console.log(auto);
+
   return (
     <main className="main-model">
       <nav className="model__navigation navigation-wrapper">

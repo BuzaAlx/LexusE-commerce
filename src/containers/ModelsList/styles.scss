@@ -1,0 +1,90 @@
+// .main-wrapper {
+//   font-family: NobelWGL, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+//   font-size: 14px;
+//   line-height: 16px;
+//   background-color: #efefef;
+//   & .container-wide {
+//     display: flex;
+//   }
+// }
+
+// .header-top {
+//   display: flex;
+//   align-items: center;
+//   background-color: white;
+// }
+
+// .header-top__navigation {
+//   margin: 0 auto;
+//   justify-content: center;
+// }
+
+// .navigation {
+//   display: flex;
+//   font-family: NobelWGL, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+//   font-size: 16px;
+//   color: rgb(46, 46, 46);
+//   // margin-left: 280px;
+// }
+
+// .navigation-item {
+//   padding-bottom: 15px;
+//   margin-right: 20px;
+// }
+
+//////////////////
+
+.main-carList {
+  min-height: 75vh;
+}
+
+.main-carList .navigation-item {
+  padding-bottom: 5px;
+}
+
+.main-carList .navigation {
+  margin: 20px 0;
+}
+
+.navigation > .active {
+  border-bottom: 1px solid black;
+}
+
+.main-carList > nav {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.main-carList .navigation {
+  margin-left: 0;
+  color: rgb(90, 90, 90);
+}
+
+.logo {
+  width: 150px;
+  height: 75px;
+}
+
+.main-carList .cards-container {
+  background-color: white;
+}
+
+.sidebar {
+  max-width: 90px;
+  width: 100%;
+  text-align: center;
+  & li {
+    margin-bottom: 50px;
+    padding: 24px;
+    transition: background-color 0.2s ease;
+  }
+  & li:hover {
+    background-color: gainsboro;
+  }
+}
+
+.main-wrapper .column:first-child {
+  padding-top: 130px;
+}
+

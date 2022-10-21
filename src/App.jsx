@@ -1,4 +1,4 @@
-import React, { StrictMode } from "react";
+import React, { StrictMode, useState, useEffect } from "react";
 import Home from "./containers/Home";
 import Model from "./containers/Model";
 import Services from "./containers/Services";
@@ -10,12 +10,47 @@ import Poslugi from "./containers/Poslugi";
 import Servis from "./containers/Servis";
 import Salon from "./containers/Salon";
 import Contacts from "./containers/Contacts";
+import firebase from "./services/firebase";
+import getListOfModifications from "./helpers/getListOfModifications";
 
 // import AppRouter from "routers/AppRouter";
 
 const App = () => {
+  // const [automobiles, setAllAutomobiles] = useState([]);
+
+  // const fetchAutomobiles = async () => {
+  //   const docs = await firebase.getAutomobiles();
+
+  //   setAllAutomobiles(docs.products);
+  // };
+
+  // useEffect(() => {
+  //   if (automobiles.length === 0) {
+  //     fetchAutomobiles();
+  //   }
+  // }, []);
+
+  // console.log(getListOfModifications(automobiles));
+
+  // const fetchAutomobiles = async () => {
+  //   const docs = await firebase.getSingleAuto("v6Z4rbrDw2IpJiXRTMfK");
+
+  //   // console.log(docs);
+  //   setAllAutomobiles({ id: docs.id, ...docs.data() });
+  // };
+
+  // useEffect(() => {
+  //   if (automobiles.length === 0) {
+  //     fetchAutomobiles();
+  //   }
+  // }, []);
+
+  // console.log(automobiles);
+
   return (
     <StrictMode>
+      {/* <ModelsList /> */}
+      <div>asdasd</div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
